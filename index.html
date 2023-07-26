@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- Main Section -->
+      <div class="container">
+        <!-- Heading -->
+        <div class="heading-lightmode">
+          <h2>CodingWithMe</h2>
+          <div class="mode">
+            <div data-modeName class="mode-box">Mode</div>
+            <div data-modeColor class="mode-box">Color</div>
+          </div>
+        </div>
+
+        <!-- Search Section -->
+        <form data-searchBtn class="search-section" action="">
+          <img src="./assets/search.svg" />
+          <input
+            type="text"
+            placeholder="Enter GitHub Username"
+            data-username
+          />
+
+          <!-- <button class="reset" type="reset" data-crossButton>
+            <img src="./assets/cross.svg" />
+          </button> -->
+
+          <button class="search" type="submit">Search</button>
+        </form>
+      </div>
+
+      <!-- Display Section -->
+      <div class="display-section">
+        <img class="profile-pic" />
+
+        <!-- All Content display area -->
+        <div class="all-content">
+          <!-- FullName and Date of Join -->
+          <div class="name-date">
+            <div class="name" data-fullName></div>
+            <div class="join-date"></div>
+          </div>
+
+          <!-- Github Username -->
+          <div class="github-username" data-displayUsername></div>
+
+          <!-- Bio  -->
+          <div class="bio" data-displayBio></div>
+
+          <!-- Repo Details and Followers -->
+          <div class="repo-followers">
+            <div class="repo">
+              <h4>Repos</h4>
+              <p data-displayRepo></p>
+            </div>
+
+            <div class="followers">
+              <h4>Followers</h4>
+              <p data-displayFollowers></p>
+            </div>
+
+            <div class="following">
+              <h4>Following</h4>
+              <p data-displayFollowing></p>
+            </div>
+          </div>
+
+          <!-- Location, Website, Twitter and Address Detail Section -->
+          <div class="address-section">
+            <div class="location">
+              <img src="./assets/location.svg" width="30px" />
+              <p data-displayCity></p>
+            </div>
+
+            <div class="website-link">
+              <img src="./assets/link.svg" width="30px" />
+              <a data-displayWebsite></a>
+            </div>
+
+            <div class="twitter">
+              <img src="./assets/twitter.svg" width="30px" />
+              <a data-displayTwitter></a>
+            </div>
+
+            <div class="address">
+              <img src="./assets/office.svg" width="30px" />
+              <p data-displayAddress></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- If Invalid Username is Entered -->
+      <div class="invalid">
+        <h2>
+          No Account found for entered Username. Please enter correct Username
+          (Without '@')
+        </h2>
+      </div>
+      <div class="APILimit">
+        <h2>Sorry, API rate Limit exceed. Please try again later.</h2>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script src="./script.js"></script>
+  </body>
+</html>

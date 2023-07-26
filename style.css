@@ -1,0 +1,598 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+  font-size: 16px;
+  /* Content Overflow */
+}
+
+/* Body */
+body {
+  background: linear-gradient(231deg, rgb(10, 110, 189), rgb(44, 211, 225));
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 95vh;
+}
+
+/* Main Section */
+.container {
+  width: 60vw;
+  /* border: 2px solid red; */
+  background-color: rgb(210, 210, 210);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem;
+  margin-top: 0.5rem;
+
+  border-radius: 1rem;
+}
+
+/* Heading */
+.heading-lightmode {
+  width: 80%;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  /* border: 2px solid black; */
+  margin: 0px auto;
+}
+.heading-lightmode h2 {
+  font-size: larger;
+  font-weight: 800;
+  color: rgb(79, 79, 79);
+}
+
+.mode {
+  display: flex;
+  justify-content: space-between;
+  margin: 6px;
+  color: rgb(44, 44, 44);
+}
+
+.mode-box {
+  /* border: 2px solid black; */
+  border-radius: 6px;
+  padding: 6px;
+}
+
+/* Search Section */
+.search-section {
+  width: 80%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.4rem;
+
+  /* border: 2px solid black; */
+  padding: 6px;
+  border-radius: 6px;
+  margin: 4px auto;
+}
+
+.search-section img {
+  border-radius: 6px;
+  width: 40px;
+  height: 40px;
+
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  z-index: 1;
+}
+
+.search-section input {
+  padding: 1px 6px 1px 50px;
+  border-radius: 6px;
+  height: 40px;
+  position: relative;
+  width: 70%;
+  border: none;
+  color: rgba(0, 0, 255, 0.715);
+}
+
+.search-section input::placeholder {
+  color: rgba(0, 0, 255, 0.715);
+  font-size: 16px;
+}
+
+.search-section input:focus {
+  outline: 0;
+}
+
+/* Search Button */
+.search-section .search {
+  width: 20%;
+  margin-left: 4px;
+  border-radius: 8px;
+  border: none;
+  padding: 0px 10px;
+  font-weight: 600;
+  color: white;
+  background-color: rgb(58, 58, 255);
+}
+
+.search-section .search:hover {
+  background-color: rgb(0, 0, 232);
+  color: white;
+
+  box-shadow: 0px 0px 2px rgb(0, 0, 250);
+}
+
+/* --------------------------------------------------------- */
+
+/* Display Section */
+.display-section {
+  /* border: 2px solid black; */
+  background-color: rgb(210, 210, 210);
+  width: 60vw;
+  margin: 2px auto;
+  gap: 10px;
+
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: none;
+}
+
+.display-section.active {
+  display: flex;
+}
+
+/* Profile Picture */
+.display-section .profile-pic {
+  /* border: 2px solid red; */
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.all-content {
+  /* border: 2px solid cyan; */
+  padding: 10px;
+}
+
+.name-date {
+  display: flex;
+  /* border: 2px solid red; */
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+.name {
+  font-weight: 600;
+  /* border: 2px solid black; */
+  width: 43%;
+  padding: 4px;
+}
+
+.join-date {
+  width: 42%;
+  /* border: 2px solid green; */
+  padding: 4px;
+  font-size: 16px;
+}
+
+/* Username */
+.github-username {
+  /* border: 2px solid green; */
+  margin-top: 4px;
+  padding: 4px;
+  font-weight: 600;
+}
+
+/* Bio */
+.bio {
+  margin-top: 2px;
+  padding: 4px;
+  font-size: 15px;
+}
+
+/* Repo, Followers and Following */
+.repo-followers {
+  /* border: 3px solid purple; */
+  margin: 1rem auto;
+  width: 75%;
+  border-radius: 6px;
+  background-color: azure;
+  padding: 5px 12px;
+
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.repo h4,
+.followers h4,
+.following h4 {
+  color: rgb(59, 59, 59);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.repo p,
+.followers p,
+.following p {
+  color: rgb(24, 200, 248);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Css for Invalid Username Section  */
+.invalid {
+  text-align: justify;
+  color: rgb(255, 0, 0);
+  background-color: rgb(210, 210, 210);
+  width: 60vw;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+
+  display: none;
+}
+.invalid.active {
+  display: block;
+}
+
+.invalid h2 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* CSS for API rate Exceed  */
+
+.APILimit {
+  text-align: justify;
+  color: rgb(255, 57, 159);
+  font-weight: bolder;
+  background-color: rgb(210, 210, 210);
+  width: 60vw;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+
+  display: none;
+}
+.APILimit.active {
+  display: block;
+}
+
+.APILimit h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Location, Website Link, Twitter and Office Address */
+.address-section {
+  /* border: 3px solid black; */
+  padding: 1rem 0.4rem 0.6rem;
+  flex-wrap: wrap;
+  display: none;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.address-section.active {
+  display: flex;
+}
+
+.location,
+.website-link,
+.twitter,
+.address {
+  flex-basis: 50%;
+  display: flex;
+}
+
+.location p,
+.website-link p,
+.twitter p,
+.address p {
+  padding: 2px 4px 2px 6px;
+  color: black;
+  font-weight: 400;
+}
+
+/* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */
+
+/* Media Queries for Responsive Design */
+
+@media screen and (max-width: 480px) {
+  /* Main Section */
+  .container {
+    width: 70vw;
+    background-color: rgb(210, 210, 210);
+    /* background-color: rgb(210, 210, 0); */
+    display: flex;
+    flex-direction: column;
+    padding: 0.6rem 0.8rem;
+
+    margin-top: 0.2rem;
+    border-radius: 0.8rem;
+  }
+
+  /* Heading */
+  .heading-lightmode {
+    width: 95%;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid black; */
+    /* padding: 5px 10px; */
+    margin: 0px auto;
+  }
+
+  .heading-lightmode h2 {
+    font-size: smaller;
+    font-weight: 600;
+    color: rgb(79, 79, 79);
+  }
+
+  .mode {
+    display: flex;
+    justify-content: space-between;
+    margin: 6px;
+    color: rgb(44, 44, 44);
+  }
+
+  .mode-box {
+    /* border: 2px solid black; */
+    font-size: smaller;
+    border-radius: 4px;
+    padding: 4px;
+  }
+
+  /* Search Section */
+  .search-section {
+    width: 95%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.2rem;
+
+    /* border: 2px solid black; */
+    padding: 4px;
+    border-radius: 4px;
+    margin: 4px auto;
+  }
+
+  .search-section img {
+    border-radius: 5px;
+    width: 25px;
+    height: 25px;
+
+    position: absolute;
+    left: 8px;
+    top: 10px;
+    z-index: 1;
+  }
+
+  .search-section input {
+    padding: 1px 6px 1px 40px;
+    border-radius: 6px;
+    height: 33px;
+    position: relative;
+    width: 80%;
+    border: none;
+    color: rgba(0, 0, 255, 0.715);
+  }
+
+  .search-section input::placeholder {
+    color: rgba(0, 0, 255, 0.715);
+    font-size: 14px;
+  }
+
+  .search-section input:focus {
+    outline: 0;
+  }
+
+  /* Search Button */
+  .search-section .search {
+    width: 20%;
+    margin-left: 4px;
+    border-radius: 8px;
+    border: none;
+    padding: 0px 8px;
+    font-weight: 600;
+    font-size: 13px;
+    color: white;
+    background-color: rgb(58, 58, 255);
+  }
+
+  .search-section .search:hover {
+    background-color: rgb(0, 0, 232);
+    color: white;
+    box-shadow: 0px 0px 2px rgb(0, 0, 250);
+  }
+
+  /* --------------------------------------------------------- */
+
+  /* Display Section */
+  .display-section {
+    /* border: 2px solid black; */
+    background-color: rgb(210, 210, 210);
+    width: 70vw;
+    display: flex;
+    margin: 2px auto;
+    gap: 8px;
+
+    margin-top: 1rem;
+    padding: 0.9rem;
+    border-radius: 0.8rem;
+    display: none;
+  }
+
+  .display-section.active {
+    display: flex;
+  }
+
+  /* Profile Picture */
+  .display-section .profile-pic {
+    /* border: 2px solid red; */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .all-content {
+    padding: 4px;
+  }
+
+  .name-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 4px;
+  }
+
+  .name {
+    font-weight: 600;
+    width: 43%;
+    padding: 4px;
+    font-size: 12px;
+  }
+
+  .join-date {
+    width: 42%;
+    padding: 4px;
+    font-size: 12px;
+  }
+
+  /* Username */
+  .github-username {
+    margin-top: 4px;
+    padding: 4px;
+    font-weight: 600;
+    font-size: 12px;
+  }
+
+  /* Bio */
+  .bio {
+    margin-top: 2px;
+    padding: 4px;
+    font-size: 15px;
+  }
+
+  /* Repo, Followers and Following */
+  .repo-followers {
+    margin: 0.8rem auto;
+    width: 90%;
+    border-radius: 6px;
+    background-color: azure;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  .repo h4,
+  .followers h4,
+  .following h4 {
+    color: rgb(59, 59, 59);
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .repo p,
+  .followers p,
+  .following p {
+    color: rgb(24, 200, 248);
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  /* CSS for Invalid Username Section  */
+  .invalid {
+    text-align: justify;
+    color: rgb(252, 77, 77);
+    background-color: rgb(210, 210, 210);
+    width: 70vw;
+    margin-top: 1rem;
+    padding: 0.8rem;
+    border-radius: 0.8rem;
+
+    display: none;
+  }
+  .invalid.active {
+    display: block;
+  }
+
+  .invalid h2 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  /* CSS for API rate Exceed  */
+  .APILimit {
+    text-align: justify;
+    color: rgb(255, 57, 159);
+    font-weight: bolder;
+    background-color: rgb(210, 210, 210);
+    width: 70vw;
+    margin-top: 1rem;
+    padding: 0.8rem;
+    border-radius: 0.8rem;
+
+    display: none;
+  }
+  .APILimit.active {
+    display: block;
+  }
+
+  .APILimit h2 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  /* Location, Website Link, Twitter and Office Address */
+  .address-section {
+    padding: 0.7rem 0.4rem 0.6rem;
+    flex-wrap: wrap;
+    display: none;
+    gap: 0.4rem;
+  }
+
+  .address-section.active {
+    display: flex;
+  }
+
+  .address-section img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .address-section a {
+    font-size: 12px;
+  }
+
+  .location,
+  .website-link,
+  .twitter,
+  .address {
+    flex-basis: 50%;
+    display: flex;
+  }
+
+  .location p,
+  .website-link p,
+  .twitter p,
+  .address p {
+    padding: 2px 4px 2px 6px;
+    color: black;
+    font-weight: 400;
+    font-size: 12px;
+  }
+}
+
+/* ------------------------------------------------------------------ */
